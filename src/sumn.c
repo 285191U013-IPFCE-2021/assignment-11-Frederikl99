@@ -1,8 +1,15 @@
 #include "sumn.h"
-
+#include "assert.h"
 #include<stdio.h>
 
+// Sum the n positive odd numbers
 int sumn (int n)
 {
-    return 0;
+// Precondition
+assert (n >= 1);
+
+    if (n == 1) //base case
+        return 1;
+    else 
+        return n * 2 - 1 + sumn(n - 1 ); // recursive step
 }
